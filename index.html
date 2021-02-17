@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">        
     <title>This is a sample for webform reading and creating pdf</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-datepicker.css">
 
     <!-- jQuery library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -64,11 +66,11 @@
 
 			doc.text(50, 32, semester_begin);
 			doc.text((gender == "Male" ? 50 : 65), 39, "X");
-			doc.text(40, 46, lastname);
-			doc.text(40, 53, firstname);
+			doc.text(40, 46, "last name : "+lastname);
+			doc.text(40, 53, "fist name "+firstname);
 			doc.text(40, 59, birthday);
-			doc.text(40, 65, "Hauptstrasse 172");
-			doc.text(50, 78, "76297 Stutensee");
+			doc.text(40, 65, "static text location");
+			doc.text(50, 78, "");
 			doc.text(45, 110, place_of_birth + ", " + country_of_birth);
 			doc.text(45, 116, nationality);
 			doc.text(45, 130, "Zuzug aus " + nationality)
@@ -840,7 +842,7 @@
         <canvas id="signature" width="500" height="200">
         </canvas>
         <p>please sign here</p>
-        
+
         <!--<div class="form-row mb-3">
             <div class="wrapper mb-3">
                 <canvas id="signature-pad" class="signature-pad" width="400" height="200" style="touch-action: none;"></canvas>
